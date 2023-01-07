@@ -1,0 +1,28 @@
+{
+  "name": "chaffer_marketplace",
+  "version": "1.0.0",
+  "description": "CHAFFER is an online marketplace platform for buying and selling used items.",
+  "main": "connect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon connect.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krishnaa2902/CHAFFER_MarketPlace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krishnaa2902/CHAFFER_MarketPlace/issues"
+  },
+  "homepage": "https://github.com/krishnaa2902/CHAFFER_MarketPlace#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "mongodb": "^4.13.0",
+    "mongoose": "^6.8.3",
+    "nodemon": "^2.0.20"
+  }
+}

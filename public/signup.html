@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <title>Document</title>
+    <!-- <script src="connect.js"></script> -->
+    
+</head>
+<body>
+    <section class="h-screen">
+        <div class="container px-6 py-12 h-full">
+          <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
+            <div class="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                class="w-full"
+                alt="Phone image"
+              />
+            </div>
+            <div class="md:w-8/12 lg:w-5/12 lg:ml-20">
+              <form  onsubmit="return signupval() && handleFormSubmit(event)" name="signupform" action="/sign_up" method="post">
+                <div class="flex flex-row items-center justify-center lg:justify-start">
+                    <h1 class="text-3xl mb-10 mr-4 ">Create a new account</h1>
+                    
+                  </div>
+                <!-- Email input -->
+                <div class="mb-6">
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"  
+                    class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    placeholder="Email address"
+                  />
+                </div>
+
+                <!-- Password input -->
+                <div class="mb-6">
+                  <input
+                    type="password"
+                    name="pass"
+                    id="pass"  
+                    class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    placeholder="Password"
+                  />
+                </div>
+
+                <!-- Phoneno input -->
+                <div class="mb-6">
+                    <input
+                      type="text"
+                      name="pno"
+                      id="pno"                      
+                      class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                      placeholder="Phone No"
+                    />
+                </div>
+
+                <!-- Home/Office Address input -->
+                <div class="mb-6">
+                    <textarea class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none resize-none" 
+                    name="addr" 
+                    id="addr"
+                    placeholder="Home/Office Address"
+                    ></textarea>
+                </div>
+                      
+                
+      
+                <!-- Submit button -->
+                <button
+                  type="submit"
+                  class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
+                  data-mdb-ripple="true"
+                  data-mdb-ripple-color="light"
+                >
+                  Signup
+                </button>
+      
+                <p class="text-sm font-semibold mt-2 pt-1 mb-0">
+                    Already have an account?
+                    <a
+                      href="login.html"
+                      class="text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out"
+                      >Login</a
+                    >
+                  </p>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>  
+      <!-- index.html -->
+
+
+
+      <script src="form.js"></script>
+        <!-- // function signupval() {
+        //   var email = document.getElementById("email").value;
+        //   var pass = document.getElementById("pass").value;
+        //   var pno = document.getElementById("pno").value;
+        //   var addr = document.getElementById("addr").value;
+        
+        //   if (email == "") {
+        //     alert("Please enter your email address");
+        //     return false;
+        //   }
+        //   if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+        //     alert("Please enter a valid email address");
+        //     return false;
+        //   }
+      
+        //   if (pass == "") {
+        //     alert("Please enter your password");
+        //     return false;
+        //   }
+        //   if (pass.length < 8) {
+        //     alert("Please enter a valid password (at least 8 characters)");
+        //     return false;
+        //   }
+      
+        //   if (pno == "") {
+        //     alert("Please enter your phone number");
+        //     return false;
+        //   }
+        //   if (pno.length != 10) {
+        //     alert("Please enter a valid phone number (exactly 10 digits long)");
+        //     return false;
+        //   }
+
+        //   if (!/^\d+$/.test(pno)) {
+        //     alert("Please enter a valid phone number (only numeric input allowed)");
+        //     return false;
+        //   }
+      
+        //   if (addr == "") {
+        //     alert("Please enter your address");
+        //     return false;
+        //   }
+        //   handleFormSubmit(event);
+        //   return true;
+        // }
+
+        // function handleFormSubmit(e) {
+        //     e.preventDefault(); // prevent the form from reloading the page
+
+        //     var form = e.target;
+        //     var email = form.elements.email.value;
+        //     var password = form.elements.pass.value;
+        //     var phone = form.elements.pno.value;
+        //     var address = form.elements.addr.value;
+
+        //     console.log("Email:", email);
+        //     console.log("Password:", password);
+        //     console.log("Phone:", phone);
+        //     console.log("Address:", address);
+
+
+
+        //     signupCollection.insertOne({
+        //       email: email,
+        //       password: password,
+        //       phone: phone,
+        //       address: address,
+        //     }, function(err, res) {
+        //       console.log("Inserted a document into the signup collection");
+        //     });
+        // }            -->
+
+
+
+     
+</body>
+</html>
